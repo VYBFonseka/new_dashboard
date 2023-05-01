@@ -1,0 +1,25 @@
+.status{
+    width:auto;
+    display: flex;
+    justify-content:space-evenly;
+    flex: 4;
+    margin: 5px 20px 20px;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: space-around;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(217,217,217,1);
+    -moz-box-shadow: 5px 5px 20px 5px rgba(217,217,217,1);
+    box-shadow: 5px 5px 20px 5px rgba(217,217,217,1);
+}
+
+
+
+.statusProductName{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.statusProductStatus{
+    font-size:  28px;
+    font-weight: 600;
+}
