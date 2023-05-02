@@ -1,3 +1,4 @@
+import Chart from "../../components/chart/Chart"
 import FanPump from "../../components/fanPump/FanPump"
 import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo"
 import Statusbar from "../../components/statusbar/Statusbar"
@@ -9,6 +10,7 @@ export default function Home() {
         <Statusbar/>
         <FeaturedInfo/>
         <FanPump/>
+        <Chart/>
     </div>
   )
 }
