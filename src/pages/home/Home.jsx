@@ -1,5 +1,9 @@
+
+
+import SourceMeter from "../../components/SourceMeter/SourceMeter"
+import StartEndBtn from "../../components/StartEndBtn/StartEndBtn"
 import Chart from "../../components/chart/Chart"
-import FanPump from "../../components/fanPump/FanPump"
+
 import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo"
 import Statusbar from "../../components/statusbar/Statusbar"
 import "./home.css"
@@ -9,8 +13,8 @@ export default function Home() {
     <div className="home">
         <Statusbar/>
         <FeaturedInfo/>
-        <FanPump/>
-        <Chart/>
+        <SourceMeter/>
+        <StartEndBtn/> 
     </div>
   )
 }

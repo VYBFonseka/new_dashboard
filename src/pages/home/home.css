@@ -1,3 +1,10 @@
 .home{
     flex: 5;    
 }
+
+.homeSecondRow{
+    flex:4;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
