@@ -3,6 +3,8 @@ import ThermostatIcon from '@mui/icons-material/Thermostat';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import SpeedIcon from '@mui/icons-material/Speed';
+import { realdb } from '../../firebase-config';
+
 
 
 export default function FeaturedInfo() {

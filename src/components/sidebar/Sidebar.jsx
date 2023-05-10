@@ -12,7 +12,7 @@ export default function Sidebar() {
             <div className="sidebarMenu">
                 
                 <ul className='sidebarList'>
-                    <Link to="/" className="link">
+                    <Link to="/dashboard" className="link">
                     <li className="sidebarListItem">
                         <DesktopWindowsIcon className='sidebarIcon'/>
                         Dashboard 
