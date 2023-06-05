@@ -15,14 +15,15 @@ function App() {
       <div className="container">
         <Sidebar/>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/dashboard" element={<Home/>}/>
           <Route path="/dataTables" element={<DataTables/>}/>
           <Route path="/analytics" element={<Analytics/>}/>
-          <Route path="/logIn" element={<LogIn/>}/>
+          
         </Routes>
-      
-         
       </div>
+      <Routes>
+      <Route path='/logIn' element = {<LogIn/>}/>
+      </Routes>
       </Router>
   
   );

@@ -1,4 +1,4 @@
 .logIn{
+    display: flex;
     flex: 5;
-    padding: 20px;
 }

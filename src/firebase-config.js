@@ -1,10 +1,10 @@
-import {firebase} from "firebase/app";
+import firebase from "firebase/compat/app";
 import "firebase/firestore"
 import "firebase/database"
 
 
 import { getFirestore} from "@firebase/firestore";
-import { getDatabase } from "firebase/database";
+import { getDatabase} from "firebase/database";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBvdkPDqdb8J0LFAl-p-AToIBGC_uY4t9s",

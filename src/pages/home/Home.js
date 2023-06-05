@@ -2,7 +2,7 @@
 
 import SourceMeter from "../../components/SourceMeter/SourceMeter"
 import StartEndBtn from "../../components/StartEndBtn/StartEndBtn"
-import Chart from "../../components/chart/Chart"
+import { realdb } from '../../firebase-config';
 
 import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo"
 import Statusbar from "../../components/statusbar/Statusbar"

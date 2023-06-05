@@ -9,6 +9,7 @@ export default function ResisInfo() {
             <ElectricBoltIcon className='resisInfoIconTemp'/>
             <div className='resisInfocontainer'>
             <span className='resisInfoResistance'> res &#937;</span>
+            
             </div>
         </div>
     </div>
