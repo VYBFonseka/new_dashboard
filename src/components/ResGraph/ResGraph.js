@@ -9,9 +9,6 @@ import {
   Tooltip,
   Legend
 } from "recharts";
-import { getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, getDocs, deleteField } from "firebase/firestore";
-
-const storedb = getFirestore(app);
 
 const data = [
   {
@@ -96,16 +93,4 @@ export default function ResGraph() {
       />
     </LineChart>
   );
-}
-
-async function drawGraph (){
-  var resArray = [];
-  var tempArray = [];
-  var humArray = [];
-  var surfTempArray = [];
-  var press = [];
-
-const querySnapshot = await getDocs(collection(storedb,""))
-
-
 }

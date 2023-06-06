@@ -1,5 +1,6 @@
 import ResGraph from '../../components/ResGraph/ResGraph'
-import './analytics.css' 
+import './analytics.css'
+
 
 
 export default function Analytics() {
@@ -11,7 +12,3 @@ export default function Analytics() {
     
   )
 }
-
-<script type ='module'>
-  
-</script>
