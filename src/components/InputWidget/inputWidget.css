@@ -1,0 +1,64 @@
+.inputWidget{
+    flex:1;
+    margin: 20px 20px 20px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(217,217,217,1);
+    -moz-box-shadow: 5px 5px 20px 5px rgba(217,217,217,1);
+    box-shadow: 5px 5px 20px 5px rgba(217,217,217,1);
+}
+.inputform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 20px 20px 20px;
+
+}
+.inputFlowRate{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.inputFlowRate>label{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.inputItem{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    margin-top: 10px;
+}
+
+.inputItem>label{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.initialInputs{
+    border:none;
+    width:auto;
+    height: 30px;
+    border-bottom: 1px solid grey;
+
+}
+
+.setValuesBtn{
+    
+    align-self: last baseline;
+    margin-top: 20px;
+    width: fit-content;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(202, 169, 233);
+    font-weight: 600;
+    font-size: 16px;
+
+}

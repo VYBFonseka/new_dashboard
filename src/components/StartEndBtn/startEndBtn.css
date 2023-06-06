@@ -1,0 +1,14 @@
+.startEndBtn{
+    flex:5;
+    
+
+}
+
+.startEndBtnContainer{
+
+    flex:1;
+    align-self: center;
+    justify-content: center;
+    margin: 20px;
+
+}
