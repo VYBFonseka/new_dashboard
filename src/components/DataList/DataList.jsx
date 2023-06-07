@@ -1,53 +1,103 @@
 import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
-import "./dataList.css"
+import { useEffect, useState } from "react";
+import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TablePagination from '@mui/material/TablePagination';
+import TableRow from '@mui/material/TableRow';
+import { storedb } from '../../firebase-config';
+import { collection,  getDocs,  addDoc,  updateDoc,  deleteDoc,  doc,} from "firebase/firestore";
 
-const columns = [
-  { field: 'timeStamp', headerName: 'Time Stamp', width: 150 },
-  {
-    field: 'resistance',
-    headerName: 'Resistance',
-    width: 150,
-    editable: true,
-  },
-  {
-    field: 'lastName',
-    headerName: 'Last name',
-    width: 150,
-    editable: true,
-  },
-  {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 110,
-    editable: true,
-  },
-  
-];
 
-const rows = [
-  { id: 1, lastName: 'Snow', resistance: '2.45', age: 35 },
-  { id: 2, lastName: 'Lannister', resistance: '5.25', age: 42 },
-  { id: 3, lastName: 'Lannister', resistance: '6', age: 45 },
-  { id: 4, lastName: 'Stark', resistance: '7.5', age: 16 },
-  { id: 5, lastName: 'Targaryen', resistance: '10.25', age: null },
-  { id: 6, lastName: 'Melisandre', resistance: null, age: 150 },
-  { id: 7, lastName: 'Clifford', resistance: '9.25', age: 44 },
-  { id: 8, lastName: 'Frances', resistance: '3.64', age: 36 },
-  { id: 9, lastName: 'Roxie', resistance: '4.12', age: 65 },
-];
+
 
 export default function DataList() {
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rows,setRows] = useState([]);
+  const empCollectionRef = collection(storedb, "aranayake");
+
+  useEffect(() => {
+    getUsers();
+  },[]);
+
+  const getUsers = async () => {
+    const data = await getDocs(empCollectionRef);
+    setRows(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
+
   return (
-    <div style={{ height: 400, width: '100%' }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        checkboxSelection
-        disableSelectionOnClick
+    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+      <TableContainer sx={{ maxHeight: 750 }}>
+        <Table stickyHeader aria-label="sticky table">
+          <TableHead>
+            <TableRow>
+                <TableCell align='left' style={{ minWidth:"100px" }}>
+                  Time Stamp
+                </TableCell>
+                <TableCell align='left' style={{ minWidth:"100px" }}>
+                  Temp
+                </TableCell>
+                <TableCell align='left' style={{ minWidth:"100px" }}>
+                  Press
+                </TableCell>
+                <TableCell align='left' style={{ minWidth:"100px" }}>
+                  Surf Temp
+                </TableCell>
+                <TableCell align='left' style={{ minWidth:"100px" }}>
+                  Humid
+                </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((row) => {
+                return (
+                  <TableRow hover role="checkbox" tabIndex={-1}>
+                    
+                        <TableCell key={row.id} align="left">
+                          {row.timeStamp}
+                        </TableCell>
+                        <TableCell key={row.id} align="left">
+                          {row.temp}
+                        </TableCell>
+                        <TableCell key={row.id} align="left">
+                          {row.press}
+                        </TableCell>
+                        <TableCell key={row.id} align="left">
+                          {row.surfTemp}
+                        </TableCell>
+                        <TableCell key={row.id} align="left">
+                          {row.hum}
+                        </TableCell>
+                  </TableRow>
+                );
+              })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[25, 100]}
+        component="div"
+        count={rows.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
       />
-    </div>
+    </Paper>
   );
 }

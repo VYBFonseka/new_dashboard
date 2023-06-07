@@ -7,7 +7,7 @@ export default function Statusbar() {
         <div>
         
         <span className="statusProductName">Product ID :</span>
-        <span className="statusProductName">product_name</span>
+        <span className="statusProductName">ADAS_0001</span>
         </div>
         <div>
         <span className="statusProductStatus">Status :</span>

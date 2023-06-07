@@ -1,6 +1,6 @@
-.fanPump{
+.inputControl{
     width:100%;
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
     margin: 20px 20px 20px;
@@ -12,7 +12,7 @@
     box-shadow: 5px 5px 20px 5px rgba(217,217,217,1);
 }
 
-.fanPumpContainer{
+.inputControlContainer{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -27,10 +27,35 @@
     text-align: left;
 }
 
-.fanPumpSwitch{
+.inputControlSwitch{
     display: flex;
     margin-left: 50px;
     justify-content:space-between;
 }
+.inputFlowRate{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.inputFlowRate>label{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.inputform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 20px 20px 20px;
 
+}
+.h1 {
+    font-size: medium;
+    text-align:center;
+}
 
+.mfc{
+    font-size: 24px;
+}

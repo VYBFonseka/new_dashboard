@@ -11,7 +11,7 @@ export default function StartEndBtn() {
         Start Test
       </Button>
       <Button variant="outlined" color="error">
-        End Test
+        Stop Test
       </Button>
     </Stack>  
     </div>

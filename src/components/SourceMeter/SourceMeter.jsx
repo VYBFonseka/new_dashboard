@@ -1,15 +1,12 @@
-import InputWidget from '../InputWidget/InputWidget'
-import ResisInfo from '../ResisInfo/ResisInfo'
-import FanPump from '../fanPump/FanPump'
-
+import InputControl from '../InputControl/InputControl'
 import './SourceMeter.css'
+import ReadingsWidget from '../ReadingsWidget/ReadingsWidget'
 
 export default function SourceMeter() {
   return (
     <div className='sourceMeter'>
-        <FanPump/>
-        <ResisInfo/>
-        <InputWidget/>
+        <InputControl/>
+        <ReadingsWidget/>
         
     </div>
   )

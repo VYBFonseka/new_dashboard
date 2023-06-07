@@ -30,13 +30,14 @@ export default function Sidebar() {
                         Data Tables
                     </li>
                     </Link>
-                    <Link to="/logIn" className="link">
+            {/*       <Link to="/logIn" className="link">
                     <li className='sidebarListItem'>
                         <LogoutIcon className='sidebarIcon'/>
                         Log Out
                     </li>
                     </Link>
-                </ul>
+              */}
+                    </ul>
 
             </div>
         </div>
