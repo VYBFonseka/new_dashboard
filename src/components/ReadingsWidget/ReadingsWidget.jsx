@@ -1,10 +1,10 @@
-import './inputWidget.css'
+import './readingsWidget.css'
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 
-export default function InputWidget() {
+export default function ReadingsWidget() {
   return (
-    <div className='inputWidget'>
+    <div className='ReadingsWidget'>
         <form className='inputform'>
             
             <div className='inputItem'>

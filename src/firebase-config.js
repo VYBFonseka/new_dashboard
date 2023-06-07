@@ -1,6 +1,6 @@
-import firebase from "firebase/compat/app";
 import "firebase/firestore"
 import "firebase/database"
+import { initializeApp } from "firebase/app";
 
 
 import { getFirestore} from "@firebase/firestore";
@@ -16,7 +16,7 @@ const firebaseConfig = {
     appId: "1:55936319238:web:cc773ba3cd4e192265a887"
   };
 
-  const app = firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
 
   export const realdb = getDatabase(app);
   export const storedb = getFirestore(app);
