@@ -32,11 +32,24 @@ export default function InputControl() {
     <div className="inputControlContainer">
       <span className="switchTitle">Solenoid Valve 1</span>
       <Switch className='inputControlSwitch'/>
+      <label> Open Duration</label>
+                <input 
+                    type="text" 
+                    placeholder='Turn off after (in Seconds)'
+                    className='initialInputs'
+                />
       </div>
       <div className="inputControlContainer">
       <span className="switchTitle">Solenoid Valve 2</span>
       <Switch className='inputControlSwitch'/>
+      <label> Open Duration</label>
+                <input 
+                    type="text" 
+                    placeholder='Turn off after (in Seconds)'
+                    className='initialInputs'
+                />
       </div>
+      <button className='setValuesBtn'>Set Values</button>
     </div>
     
   )
