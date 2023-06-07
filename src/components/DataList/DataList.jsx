@@ -66,22 +66,22 @@ export default function DataList() {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
-                  <TableRow hover role="checkbox" tabIndex={-1}>
+                  <TableRow key={row.id} hover role="checkbox" tabIndex={-1}>
                     
-                        <TableCell key={row.id} align="left">
-                          {row.timeStamp}
+                        <TableCell align="left">
+                          {row.timeSlot}
                         </TableCell>
-                        <TableCell key={row.id} align="left">
-                          {row.temp}
+                        <TableCell align="left">
+                          {row.temperatureAtmos}
                         </TableCell>
-                        <TableCell key={row.id} align="left">
-                          {row.press}
+                        <TableCell align="left">
+                          {row.porePressure2}
                         </TableCell>
-                        <TableCell key={row.id} align="left">
-                          {row.surfTemp}
+                        <TableCell align="left">
+                          {row.moisture2}
                         </TableCell>
-                        <TableCell key={row.id} align="left">
-                          {row.hum}
+                        <TableCell align="left">
+                          {row.humidityAtmos}
                         </TableCell>
                   </TableRow>
                 );
