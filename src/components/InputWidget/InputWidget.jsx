@@ -1,18 +1,12 @@
 import './inputWidget.css'
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 
 export default function InputWidget() {
   return (
     <div className='inputWidget'>
         <form className='inputform'>
-            <div className='inputFlowRate'>
-                <label>Flow Rate</label>
-                <input 
-                    type="text" 
-                    placeholder='flow rate'
-                    className='initialInputs'
-                />
-            </div>
+            
             <div className='inputItem'>
                 <label>Test Time Duration</label>
                 <input 
@@ -39,6 +33,14 @@ export default function InputWidget() {
             </div>
             <button className='setValuesBtn'>Set Values</button>
         </form>
+        <div className="resisInfoItem">
+            <span className="resisInfoTitle">Resistance</span>
+            <ElectricBoltIcon className='resisInfoIconTemp'/>
+            <div className='resisInfocontainer'>
+            <span className='resisInfoResistance'> res &#937;</span>
+            
+            </div>
+        </div>
     </div>
   )
 }
