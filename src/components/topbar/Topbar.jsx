@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import "./topbar.css"
-import LogoutIcon from '@mui/icons-material/Logout';
+import { RefreshRounded } from "@mui/icons-material";
 
 export default function Topbar() {
+
   return (
     <div className='topbar'>
         <div className='topbarWrapper'>
@@ -11,9 +12,8 @@ export default function Topbar() {
             </div>
             <div className='topRight'>
                 <div className="topbarIconContainer">
-                    <Link to="/logIn" className="link">
-                    <LogoutIcon />
-                    </Link>
+                    
+                    <RefreshRounded onClick={()=> window.location.reload(false)}/>
 
                 </div>
             </div>

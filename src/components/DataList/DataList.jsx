@@ -21,10 +21,10 @@ export default function DataList() {
   const empCollectionRef = collection(storedb, "aranayake");
 
   useEffect(() => {
-    getUsers();
+    getList();
   },[]);
 
-  const getUsers = async () => {
+  const getList = async () => {
     const data = await getDocs(empCollectionRef);
     setRows(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };

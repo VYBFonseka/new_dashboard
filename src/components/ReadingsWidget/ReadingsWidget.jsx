@@ -3,6 +3,8 @@ import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 
 export default function ReadingsWidget() {
+
+
   return (
     <div className='ReadingsWidget'>
         <form className='inputform'>
@@ -31,16 +33,8 @@ export default function ReadingsWidget() {
                     className='initialInputs'
                 />
             </div>
-            <button className='setValuesBtn'>Set Values</button>
+            <button className='setValuesBtn' onClick={setValues}>Set Values</button>
         </form>
-        <div className="resisInfoItem">
-            <span className="resisInfoTitle">Resistance</span>
-            <ElectricBoltIcon className='resisInfoIconTemp'/>
-            <div className='resisInfocontainer'>
-            <span className='resisInfoResistance'> res &#937;</span>
-            
-            </div>
-        </div>
     </div>
   )
 }

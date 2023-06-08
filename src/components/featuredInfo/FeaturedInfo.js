@@ -3,11 +3,14 @@ import ThermostatIcon from '@mui/icons-material/Thermostat';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import SpeedIcon from '@mui/icons-material/Speed';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 
 
 export default function FeaturedInfo() {
   return (
+
+
     <div className='featured'>
         <div className="featuredItem">
             <span className="featuredTitle">Temparature</span>
@@ -35,6 +38,13 @@ export default function FeaturedInfo() {
             <WhatshotIcon className='featuredIconSurfTemp'/>
             <div className='featuredcontainer'>
             <span className='featuredTemp'> surfTemp &#8451;</span>
+            </div>
+        </div>
+        <div className="featuredItem">
+            <span className="featuredTitle">Resistance</span>
+            <ElectricBoltIcon className='resisInfoIconTemp'/>
+            <div className='featuredcontainer'>
+            <span className='featuredTemp'> res &#937;</span>
             </div>
         </div>
     </div>
