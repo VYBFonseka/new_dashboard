@@ -7,8 +7,9 @@ export default function SourceMeter() {
   return (
     <div className='sourceMeter'>
         <InputControl/>
-        <ReadingsWidget/>
         <OutputControl/>
+        <ReadingsWidget/>
+        
         
     </div>
   )
