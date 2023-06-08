@@ -9,22 +9,20 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { storedb } from '../../firebase-config';
-import { collection,  getDocs,  addDoc,  updateDoc,  deleteDoc,  doc,} from "firebase/firestore";
-
-
+import { collection,  getDocs,} from "firebase/firestore";
 
 
 export default function DataList() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [rows,setRows] = useState([]);
-  const empCollectionRef = collection(storedb, "aranayake");
+  const empCollectionRef = collection(storedb, "TestCycle");
 
   useEffect(() => {
-    getUsers();
+    getList();
   },[]);
 
-  const getUsers = async () => {
+  const getList = async () => {
     const data = await getDocs(empCollectionRef);
     setRows(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
@@ -48,16 +46,19 @@ export default function DataList() {
                   Time Stamp
                 </TableCell>
                 <TableCell align='left' style={{ minWidth:"100px" }}>
-                  Temp
+                  Temparature
                 </TableCell>
                 <TableCell align='left' style={{ minWidth:"100px" }}>
-                  Press
+                  Humidity
                 </TableCell>
                 <TableCell align='left' style={{ minWidth:"100px" }}>
-                  Surf Temp
+                  Surface Temparature
                 </TableCell>
                 <TableCell align='left' style={{ minWidth:"100px" }}>
-                  Humid
+                  Pressure
+                </TableCell>
+                <TableCell align='left' style={{ minWidth:"100px" }}>
+                 Resistance
                 </TableCell>
             </TableRow>
           </TableHead>
@@ -69,19 +70,22 @@ export default function DataList() {
                   <TableRow key={row.id} hover role="checkbox" tabIndex={-1}>
                     
                         <TableCell align="left">
-                          {row.timeSlot}
+                          {row.TimeStamp}
                         </TableCell>
                         <TableCell align="left">
-                          {row.temperatureAtmos}
+                          {row.Temperature}
                         </TableCell>
                         <TableCell align="left">
-                          {row.porePressure2}
+                          {row.Humidity}
                         </TableCell>
                         <TableCell align="left">
-                          {row.moisture2}
+                          {row.ObjectTemparature}
                         </TableCell>
                         <TableCell align="left">
-                          {row.humidityAtmos}
+                          {row.Pressure}
+                        </TableCell>
+                        <TableCell align="left">
+                          {row.Resistance}
                         </TableCell>
                   </TableRow>
                 );

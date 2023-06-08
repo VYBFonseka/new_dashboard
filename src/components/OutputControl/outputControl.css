@@ -1,6 +1,6 @@
-.inputControl{
+.outputControl{
     width:100%;
-    flex: 1.5;
+    flex: 1;
     display: flex;
     flex-direction: column;
     margin: 20px 20px 20px;
@@ -12,7 +12,7 @@
     box-shadow: 5px 5px 20px 5px rgba(217,217,217,1);
 }
 
-.inputControlContainer{
+.outputControlContainer{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -22,40 +22,18 @@
 }
 
 .switchTitle{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     text-align: left;
 }
 
-.inputControlSwitch{
+.outputControlSwitch{
     display: flex;
     margin-left: 50px;
     justify-content:space-between;
 }
-.inputFlowRate{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-.inputFlowRate>label{
-    margin-bottom: 5px;
-    font-size: 20px;
-    font-weight: 600;
-}
-.inputform{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 20px 20px 20px 20px;
 
-}
-.inputControl>h1 {
+.outputControl>h1 {
     font-size: 24px;
     text-align:center;
-}
-
-.mfc{
-    font-size: 24px;
 }
