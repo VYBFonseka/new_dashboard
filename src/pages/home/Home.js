@@ -30,7 +30,7 @@ export default function Home() {
         <Statusbar/>
         <FeaturedInfo/>
         <SourceMeter/>
-        <StartEndBtn/> 
+        {/* <StartEndBtn/>  */}
     </div>
   )
 }
