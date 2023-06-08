@@ -12,8 +12,6 @@ import { storedb } from '../../firebase-config';
 import { collection,  getDocs,} from "firebase/firestore";
 
 
-
-
 export default function DataList() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);

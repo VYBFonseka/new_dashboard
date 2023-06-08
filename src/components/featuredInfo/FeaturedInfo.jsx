@@ -7,10 +7,10 @@ import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 
 
+
 export default function FeaturedInfo() {
-  return (
-
-
+  
+    return (
     <div className='featured'>
         <div className="featuredItem">
             <span className="featuredTitle">Temparature</span>

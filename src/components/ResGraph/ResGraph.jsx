@@ -1,5 +1,7 @@
 import "./ResGraph.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { storedb } from '../../firebase-config';
+import { collection,  getDocs,} from "firebase/firestore";
 import {
   LineChart,
   Line,
@@ -55,7 +57,9 @@ const data = [
   }
 ];
 
+
 export default function ResGraph() {
+
   return (
     <LineChart
       width={1000}
