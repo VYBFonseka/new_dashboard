@@ -9,7 +9,7 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { storedb } from '../../firebase-config';
-import { collection,  getDocs,  addDoc,  updateDoc,  deleteDoc,  doc,} from "firebase/firestore";
+import { collection,  getDocs,} from "firebase/firestore";
 
 
 

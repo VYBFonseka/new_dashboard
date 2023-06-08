@@ -22,7 +22,7 @@
 }
 
 .switchTitle{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     text-align: left;
 }
@@ -33,7 +33,7 @@
     justify-content:space-between;
 }
 
-.h1 {
-    font-size: medium;
+.outputControl>h1 {
+    font-size: 24px;
     text-align:center;
 }

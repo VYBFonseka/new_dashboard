@@ -1,5 +1,5 @@
 import './readingsWidget.css'
-import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
+
 
 
 export default function ReadingsWidget() {
@@ -33,7 +33,7 @@ export default function ReadingsWidget() {
                     className='initialInputs'
                 />
             </div>
-            <button className='setValuesBtn' onClick={setValues}>Set Values</button>
+            <button className='setValuesBtn'>Set Values</button>
         </form>
     </div>
   )
