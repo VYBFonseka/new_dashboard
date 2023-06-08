@@ -32,7 +32,7 @@ export default function ReadingsWidget() {
                     type="text"
                     value = {testTime}
                     onChange={ (e)=>{setTestTime(e.target.value)}}
-                    placeholder='test time'
+                    placeholder='HH:MM:SS:000'
                     className="initialInputs"
                 />
             </div>
