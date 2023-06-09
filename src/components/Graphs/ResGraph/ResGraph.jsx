@@ -1,6 +1,6 @@
 import "./ResGraph.css";
 import React, { useEffect, useState } from "react";
-import { storedb } from '../../../../firebase-config';
+import { storedb } from "../../../firebase-config";
 import { collection,  getDocs,} from "firebase/firestore";
 import {
   LineChart,
