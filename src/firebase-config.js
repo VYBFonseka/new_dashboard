@@ -15,14 +15,14 @@ const firebaseConfig = {
     messagingSenderId: "55936319238",
     appId: "1:55936319238:web:cc773ba3cd4e192265a887"
 
-  // apiKey: "AIzaSyBU3MRltjt8UL268ejuvgrOY5zcYRanwtQ",
-  // authDomain: "fyp04-2023.firebaseapp.com",
-  // databaseURL: "https://fyp04-2023-default-rtdb.asia-southeast1.firebasedatabase.app",
-  // projectId: "fyp04-2023",
-  // storageBucket: "fyp04-2023.appspot.com",
-  // messagingSenderId: "658209007271",
-  // appId: "1:658209007271:web:8bd65836aec74370191d82",
-  // measurementId: "G-9R0VKS6EY4"
+   /* apiKey: "AIzaSyBU3MRltjt8UL268ejuvgrOY5zcYRanwtQ",
+   authDomain: "fyp04-2023.firebaseapp.com",
+   databaseURL: "https://fyp04-2023-default-rtdb.asia-southeast1.firebasedatabase.app",
+   projectId: "fyp04-2023",
+   storageBucket: "fyp04-2023.appspot.com",
+   messagingSenderId: "658209007271",
+   appId: "1:658209007271:web:8bd65836aec74370191d82",
+   measurementId: "G-9R0VKS6EY4" */
   };
 
   const app = initializeApp(firebaseConfig);

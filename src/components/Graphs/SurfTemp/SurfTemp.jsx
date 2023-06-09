@@ -1,4 +1,4 @@
-import "./ResGraph.css";
+import "./SurfTemp.css";
 import React, { useEffect, useState } from "react";
 import { storedb } from '../../firebase-config';
 import { collection,  getDocs,} from "firebase/firestore";
@@ -31,8 +31,6 @@ export default function ResGraph() {
     stats.forEach((item) => {
       let d = {
         name: item.timeSlot,
-        Humidity: item.humidityAtmos,
-        Temperature: item.temperatureAtmos,
         ObjectTemperature: item.porePressure2,
       }
 
@@ -61,22 +59,12 @@ export default function ResGraph() {
       <Legend />
       <Line
         type="monotone"
-        dataKey="Humidity"
+        dataKey="ObjectTemperature"
         stroke="#8884d8"
         activeDot={{ r: 5 }}
       />
-      <Line 
-        type="monotone" 
-        dataKey="Temperature" 
-        stroke="#8884d8" 
-        activeDot={{ r: 5 }}
-      />
-      <Line 
-        type="monotone" 
-        dataKey="ObjectTemperature" 
-        stroke="#82ca9d" 
-        activeDot={{ r: 5 }} 
-      />
     </LineChart>
+
+    
   );
 }

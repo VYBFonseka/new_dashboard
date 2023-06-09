@@ -12,7 +12,7 @@ export default function OutputControl() {
       <h1>Control Output Components</h1>
     <div className="outputControlContainer">
       <span className="switchTitle">Mixing Fan</span>
-      <Switch className='outputControlSwitch'/>
+      <Switch className='outputControlSwitch' />
       
       </div>
       <div className="outputControlContainer">
