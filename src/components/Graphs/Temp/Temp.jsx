@@ -12,7 +12,7 @@ import {
   Legend
 } from "recharts";
 
-export default function ResGraph() {
+export default function Temp() {
 
   const [chartData,setChartData] = useState([]);
 
